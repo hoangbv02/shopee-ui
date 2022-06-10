@@ -1,0 +1,123 @@
+/* Mobile */
+@media (max-width: 739px) {
+    .hidden-on-mobile {
+        display: none;
+    }
+    .header__logo {
+        margin-right: -84px;
+    }
+    .header__search--product {
+        width: auto;
+    }
+    .header__input {
+        position: fixed;
+        top: var(--height-header);
+        left: 0;
+        right: 0;
+        z-index: 10;
+        width: auto;
+        height: auto;
+        padding: 5px 5px 5px 0;
+        animation: mobileSlideIn 0.25s linear;
+    }
+    .header__search-history {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: calc(var(--height-header) + 48px);
+        right: 0;
+    }
+    @keyframes mobileSlideIn {
+        from {
+            opacity: 0;
+            top: calc(var(--height-header) / 2);
+        }
+        to {
+            opacity: 1;
+            top: var(--height-header);
+        }
+    }
+    .header-mobile {
+        display: flex;
+    }
+    .header__cart {
+        justify-content: flex-end;
+        padding-right: 24px;
+    }
+    .header__cart--modifyer {
+        font-size: 2.2rem;
+    }
+    .header__cart-notice {
+        right: 8px;
+    }
+    .container__product-list {
+        margin: 0 10px;
+    }
+    .container__page {
+        flex-wrap: wrap;
+    }
+    .footer__country {
+        text-align: center;
+    }
+    .mobile-footer {
+        line-height: 1.6;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .footer__list-follow {
+        flex-direction: column;
+    }
+    .header__search-selected {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hidden-on-tablet {
+        display: none;
+    }
+    .header__cart {
+        width: 82px;
+        justify-content: flex-end;
+    }
+    .header__cart-notice {
+        right: -20px;
+    }
+}
+/* Mobile & tablet */
+@media (max-width: 1023px) {
+    :root {
+        --height-header: 68px;
+        --height-navbar-list: 0px;
+    }
+    .header-with-search {
+        padding-top: 4px;
+    }
+
+    .hidden-on-mobile-tablet {
+        display: none;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .header__sortbar {
+        display: block;
+    }
+    .container {
+        margin-top: calc(var(--height-header) + 50px);
+    }
+    .header__cart-list::before {
+        display: none;
+    }
+    .header__cart-list {
+        position: fixed;
+        width: 100%;
+        top: var(--height-header);
+        right: 0;
+    }
+}
